@@ -17,7 +17,7 @@ class PochvenBot
   DASH      = '-'.freeze
 
   def initialize
-    @bot ||= Discordrb::Commands::CommandBot.new(token: config['bot_token'], prefix: prefix_proc)
+    @bot ||= Discordrb::Commands::CommandBot.new(token: ENV['BOT_TOKEN'], prefix: prefix_proc)
   end
 
   def run
